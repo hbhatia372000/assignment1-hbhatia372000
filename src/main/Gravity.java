@@ -1,20 +1,15 @@
-/*
- * @author Divyansh Bhardwaj
- * @version 1.0
- * */
-package main;
-
-// import java.util.Scanner;
-// uncomment the above line to use input in your program.
-
-public class Gravity {
-	// TODO 1: Create the main method
-	public static void main(String[] args) {
-		/* TODO 2:
-		 *   a. Declare all your necessary variables inside main method.
-		 *   b. Declare a constant for 'gravity', assume the value to be 9.8
-		 *   c. Calculate the result and print it to the screen.
-		 * */
+ import java.io.*;
+ class Gravity
+{
+	public static void main(String args[])throws IOException
+	{
+	double t,v,d;
+		double g=9.8;
+		DataInputStream br= new DataInputStream(System.in);
+		System.out.println("enter time");
+		t=Double.parseDouble(br.readLine());
+		v=g*t;
+		d=((1.0*g*t*t)/2);
+		System.out.println("the speed of object at"+" "+t+" "+"second after its release is"+" "+v+" "+" and the distance travelled is"+" "+d);
 	}
-	// P.S: Refer to the README.md file for the problem statement, input & output.
 }
